@@ -1,5 +1,6 @@
 # src/api.py
-from flask import Flask, request, jsonify, CORS
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from model import text_gen_pipeline  # Import your shared pipeline
 
 app = Flask(__name__)
@@ -16,3 +17,4 @@ def generate():
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
+
